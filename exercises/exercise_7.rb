@@ -9,3 +9,24 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
+
+
+
+
+store_name = gets.chomp
+
+storeE = Store.create(
+    name: store_name
+    annual_revenue: 0,
+    mens_apparel: false,
+    womens_apparel: true
+)
+
+puts storeE.valid?
+puts storeE.errors.messages
+
+burnaby = Store.create(
+    name: "Burnaby",
+)
+
+puts burnaby.errors.messages
