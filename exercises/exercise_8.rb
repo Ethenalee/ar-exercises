@@ -10,3 +10,10 @@ require_relative './exercise_7'
 puts "Exercise 8"
 puts "----------"
 
+@store2.employees.create(
+    first_name: "Luby", 
+    last_name: "Diamond", 
+    hourly_rate: 100
+)
+
+puts @store2.employees.each {|employee| puts "name is #{employee.first_name} password is #{employee.password}"}
